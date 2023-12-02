@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'CircularStd-Book';
+  src: url('fonts/CircularStd-Book.otf') format('opentype');
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+font-family: 'CircularStd-Book', sans-serif;
+}
+
+.custom-select {
+position: relative;
+display: block;
+width: 50%;
+margin: 3vh auto;
+cursor: pointer;
+z-index: 2;
+}
+
+.selected-option {
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+background-color: black;
+color: black;
+padding: 3vh 0;
+border-radius: 25px 25px 0 0;
+cursor: pointer;
+text-transform: uppercase;
+transition: 0.3s ease;
+}
+
+.selected-option:hover {
+color: white;
+}
+
+.options-container {
+display: none;
+position: absolute;
+width: 100%;
+border-radius: 0 0 25px 25px;
+overflow: hidden;
+}
+
+.option {
+padding: 3vh 0;
+cursor: pointer;
+font-size: 20px;
+color: white;
+font-family: 'CircularStd-Book', sans-serif;
+text-align: center;
+font-weight: bold;
+background-repeat: no-repeat;
+transition: 0.3s ease;
+}
+
+.option:nth-child(1) {
+background-image: url(multimedia/navidad.jpg);
+background-size: cover;
+background-position: 50% 80%;
+}
+
+.option:nth-child(2) {
+background-image: url(multimedia/normie.jpg);
+background-size: cover;
+background-position: center;
+}
+
+.option:nth-child(3) {
+background-image: url(multimedia/halloween.jpg);
+background-size: 110% auto;
+background-position: 50% 90%;
+}
+
+.option:nth-child(4) {
+background-image: url(multimedia/psicodelico.jpg);
+background-size: cover;
+background-position: center;
+}
+
+
+.modal {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+padding: 15vh 2vw;
+transition: 0.3s ease;
+overflow: hidden;
+justify-content: space-around;
+}
+
+	.modal .bgi {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+		.modal .bgi img {
+		width: 100%;
+		filter: blur(6px);
+		}
+
+	.modal .links {
+	position: relative;
+	width: calc(100%/3.9);
+	height: 80vh;
+	overflow: auto;
+	border-radius: 15px;
+	border: solid white 3px;
+	}
+    .modal .links::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    }
+    .modal .links::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+    }
+
+	.modal .links p {
+	position: relative;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	padding: 2vh 0;
+	font-weight: bold;
+	background: black;
+	color: white;
+	font-size: 20px;
+	border-bottom: solid white 3px;
+	}
+	.modal .links a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-decoration: none;
+	padding: 1.5vh 0;
+	font-size: 18px;
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+	transition: 0.2s ease;
+	text-transform: capitalize;
+	}
+		.modal .links a:hover {
+		background: rgba(255, 255, 255, 0.8);
+		color: black;
+		}
+	.modal .links a i {
+	margin: 0 1vw;
+	}
